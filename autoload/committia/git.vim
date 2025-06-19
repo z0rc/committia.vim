@@ -95,7 +95,7 @@ function! s:search_git_dir_and_work_tree() abort
             endif
         endtry
 
-        let work_tree = s:extract_first_line(out)
+        let work_tree = trim(s:extract_first_line(out))
         return [git_dir, work_tree]
     endif
 
